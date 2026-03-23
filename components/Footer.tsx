@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative  text-gray-300 px-6 lg:px-20 py-14 border-t border-sky-200 overflow-hidden">
+   <footer className="relative bg-gradient-to-b from-[#202f57] via-[#1b2744] to-[#020617] text-gray-300 px-6 lg:px-20 py-14 border-t border-white/10 overflow-hidden">
       
       {/* ✅ Background Pattern */}
       <div className="absolute inset-0">
