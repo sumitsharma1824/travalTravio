@@ -10,21 +10,31 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showBar, setShowBar] = useState(false);
 
-  // 👇 Scroll logic for sticky booking bar
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 200) {
-      setShowBar(true);
-    } else {
-      setShowBar(false);
-    }
-  };
+  // 👇 Scroll logic for sticky booking bar (SSR-safe)
+  useEffect(() => {
+    // Make sure code only runs in the browser
+    if (typeof window === "undefined") return;
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-console.log(showBar);
-console.log(window.scrollY);
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowBar(true);
+      } else {
+        setShowBar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <>
+      {/* ...rest of your navbar code... */}
+    </>
+  );
+};
+
+export default Navbar;
   return (
     <>
       {/* ✅ NAVBAR (Fixed) */}
