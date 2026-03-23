@@ -1,3 +1,5 @@
+"use client"; // optional, if you use motion or client-side logic later
+
 import Image from "next/image";
 
 const Gallery = () => {
@@ -7,35 +9,86 @@ const Gallery = () => {
 
       {/* Grid container */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
-  <div className="relative col-span-2 row-span-2 rounded-xl overflow-hidden">
-    <Image src="/Swat_Valley.jpeg" alt="Swat Valley" fill className="object-cover" />
-  </div>
+        <div className="relative col-span-2 row-span-2 rounded-xl overflow-hidden">
+          <Image
+            src="/Swat_Valley.jpeg"
+            alt="Swat Valley"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
 
-  <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
-    <Image src="/Kedarnath.jpeg" alt="Kedarnath" fill className="object-cover" />
-  </div>
+        <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
+          <Image
+            src="/Kedarnath.jpeg"
+            alt="Kedarnath"
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
 
-  <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
-    <Image src="/Chandrashila_Peak.jpeg" alt="Kedarnath" fill className="object-cover" />
-  </div>
+        <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
+          <Image
+            src="/Chandrashila_Peak.jpeg"
+            alt="Chandrashila Peak"
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
 
-  <div className="relative col-span-2 row-span-1 rounded-xl overflow-hidden">
-    <Image src="/Hampta_Valley.jpeg" alt="Hampta Valley" fill className="object-cover" />
-  </div>
+        <div className="relative col-span-2 row-span-1 rounded-xl overflow-hidden">
+          <Image
+            src="/Hampta_Valley.jpeg"
+            alt="Hampta Valley"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
 
-  <div className="relative col-span-1 row-span-2 rounded-xl overflow-hidden">
-    <Image src="/Triund_Trek.jpeg" alt="Triund Trek" fill className="object-cover" />
-  </div>
-  <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
-    <Image src="/gallary.jpeg" alt="Kedarnath" fill className="object-cover" />
-  </div>
-  <div className="relative col-span-2 row-span-2 rounded-xl overflow-hidden">
-    <Image src="/gallery1.jpeg" alt="Kedarnath" fill className="object-cover" />
-  </div>
-  <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
-    <Image src="/gallary2.jpeg" alt="Kedarnath" fill className="object-cover" />
-  </div>
-</div>
+        <div className="relative col-span-1 row-span-2 rounded-xl overflow-hidden">
+          <Image
+            src="/Triund_Trek.jpeg"
+            alt="Triund Trek"
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
+          <Image
+            src="/gallary.jpeg"
+            alt="Gallery Image"
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="relative col-span-2 row-span-2 rounded-xl overflow-hidden">
+          <Image
+            src="/gallery1.jpeg"
+            alt="Gallery Image 1"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="relative col-span-1 row-span-1 rounded-xl overflow-hidden">
+          <Image
+            src="/gallary2.jpeg"
+            alt="Gallery Image 2"
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
+      </div>
     </section>
   );
 };

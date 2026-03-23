@@ -27,14 +27,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <>
-      {/* ...rest of your navbar code... */}
-    </>
-  );
-};
 
-export default Navbar;
   return (
     <>
       {/* ✅ NAVBAR (Fixed) */}
