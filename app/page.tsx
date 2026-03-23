@@ -15,9 +15,9 @@ export default function Home() {
        {/* <Description /> */}
       <Gallery />
       <Itinerary />    
-      <Guide />
+      {/* <Guide />
       <Feature />
-      <GetApp />
+      <GetApp /> */}
       {/* <div className="h-[2000px] bg-red-500"></div> */}
     </>
   );
