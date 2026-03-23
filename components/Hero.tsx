@@ -4,13 +4,13 @@ import { Globe3DDemo } from "@/components/ui/3d-globe";
 
 const Hero = () => {
   return (
-    <section id="hero" className="w-full min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 sm:px-10 lg:px-20 py-10 gap-10">
+    <section id="hero" className="w-full min-h-screen bg-gradient-to-br from-sky-200 via-white to-emerald-200 flex flex-col-reverse lg:flex-row items-center justify-between px-6 sm:px-10 lg:px-20 py-10 gap-10">
       <div className="flex-1 space-y-6 text-center lg:text-left">
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
           Discover Amazing Treks Around 
         </h1>
 
-        <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+        <p className="text-gray-700 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
           Explore breathtaking destinations, plan your next adventure, and
           connect with fellow travelers using Trovia.
         </p>
@@ -41,7 +41,7 @@ const Hero = () => {
       </div>
 
       <div className="flex-1 flex justify-center items-center overflow-visible">
-        <div className="w-full max-w-[600px] h-[300px] sm:h-[400px] lg:h-[500px]">
+        <div className="w-full max-w-[600px] h-[300px] sm:h-[400px] lg:h-[500px] drop-shadow-2xl">
           <Globe3DDemo />
         </div>
       </div>

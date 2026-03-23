@@ -27,13 +27,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <>
       {/* ✅ NAVBAR (Fixed) */}
-      <nav className="fixed  top-0 left-0 w-full bg-[#0B0F19]/80 backdrop-blur-md border-b border-[#1F2937]  z-50 shadow-sm flex items-center justify-between max-w-[1640px] mx-auto lg:px-20 px-6 py-2">
+      <nav className="fixed  top-0 left-0 w-full bg-[#0B0F19]/80 backdrop-blur-md border-b border-[#a7afbb]  z-50 shadow-sm flex items-center justify-between max-w-[1690px] mx-auto lg:px-20 px-6 py-2">
         <Link href="/">
-          <Image src="/travio.png" alt="logo" width={44} height={29} />
+          <Image src="/travio.png" alt="logo" width={44} height={39} />
         </Link>
 
         <ul className="hidden h-full gap-12 lg:flex">
@@ -93,23 +92,23 @@ const Navbar = () => {
 
       {/* ✅ STICKY BOOKING BAR */}
       <div
-  className={`fixed left-0 w-full z-[49] bg-[#111827] border rounded-3xl shadow-md z-40 transition-all duration-300 ${
-    showBar
-      ? "top-[70px] translate-y-0 opacity-100"
-      : "top-[70px] -translate-y-full opacity-0"
-  }`}
->
+        className={`fixed left-0 w-full z-[49] bg-gradient-to-r from-[#0f172a] to-[#1e293b] backdrop-blur-md  border rounded-3xl shadow-md z-40 transition-all duration-300 ${
+          showBar
+            ? "top-[70px] translate-y-0 opacity-100"
+            : "top-[70px] -translate-y-full opacity-0"
+        }`}
+      >
         <div className="max-w-[1640px] mx-auto flex items-center justify-between px-6 lg:px-20 py-3">
           {/* Price */}
           <span className="font-bold text-lg">₹12,999</span>
 
           {/* CTA */}
           <div className="flex items-center gap-4">
-            <button className="border px-4 py-2 rounded-lg text-sm">
+            <button className="border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg text-sm hover:bg-cyan-400 hover:text-black transition">
               Select Date
             </button>
 
-            <button className="bg-black text-white px-5 py-2 rounded-lg text-sm hover:bg-gray-800">
+            <button className="bg-cyan-400 text-black px-5 py-2 rounded-lg text-sm hover:bg-cyan-300 transition">
               Book Now
             </button>
           </div>
@@ -117,7 +116,7 @@ const Navbar = () => {
       </div>
 
       {/* 👇 Spacer to prevent content hiding under fixed navbar */}
-      <div className="h-[70px]" />
+      <div className="h-[60px]" />
     </>
   );
 };

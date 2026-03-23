@@ -3,8 +3,7 @@ import { TREKS } from "@/constants/treks";
 
 export default function TrekSection() {
   return (
-    <section className="px-6 lg:px-20 py-16 bg-[#0B0F19]">
-      
+<section className="px-6 lg:px-20 py-16 bg-gradient-to-b from-white to-sky-200">      
       <h2 className="text-white text-3xl font-bold mb-8">
         Explore Treks
       </h2>
