@@ -7,16 +7,16 @@ const Itinerary = () => {
   return (
     <section className="relative px-6 lg:px-20 py-20 bg-gradient-to-b from-white to-sky-50 overflow-hidden">
       
-      {/* ✅ Background Pattern */}
+      {/* Background Pattern */}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.svg" // 👈 your image name here
+          src="/hero-bg.svg"
           alt="pattern"
           className="w-full h-full object-cover opacity-30"
         />
       </div>
 
-      {/* ✅ Content Wrapper */}
+      {/* Content Wrapper */}
       <div className="relative z-10">
         <h2 className="text-3xl font-bold text-gray-900 mb-16 text-center">
           Your Journey Plan
@@ -44,7 +44,9 @@ const Itinerary = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     whileHover={{ scale: 1.04 }}
                     transition={{ duration: 0.6 }}
-                    className="w-[45%] relative group"
+                    
+                    
+                    className="w-[90%] sm:w-[80%] lg:w-[45%] relative group ml-8 sm:ml-0"
                   >
                     {/* Glow Effect */}
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-400 to-emerald-400 opacity-0 group-hover:opacity-100 blur-md transition duration-300" />
